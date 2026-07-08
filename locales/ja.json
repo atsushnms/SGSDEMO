@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "lang": "ja",
+    "dir": "ltr"
+  },
+  "app": {
+    "title": "PromptQuest",
+    "tagline": "遊びながら極める、生成AIプロンプト道場"
+  },
+  "nav": {
+    "home": "ホーム",
+    "quests": "クエスト",
+    "myPage": "マイページ",
+    "language": "言語"
+  },
+  "hero": {
+    "badge": "🎮 ゲーム形式で学ぶ",
+    "heading": "プロンプト力を、クエストで鍛えよう",
+    "subheading": "実務シナリオに挑戦し、AIコーチが即座にフィードバック。XPを貯めてバッジを集めよう。",
+    "cta": "クエストを始める"
+  },
+  "stats": {
+    "level": "レベル",
+    "xp": "累計XP",
+    "cleared": "クリア数",
+    "nextBadge": "次のバッジまで"
+  },
+  "quests": {
+    "heading": "クエスト一覧",
+    "subheading": "難易度を選んでプロンプトスキルを磨こう",
+    "start": "挑戦する",
+    "cleared": "クリア済み",
+    "xpLabel": "XP",
+    "levels": {
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "上級"
+    }
+  },
+  "quest": {
+    "scenario": "シナリオ",
+    "goal": "ゴール",
+    "criteria": "評価のポイント",
+    "yourPrompt": "あなたのプロンプト",
+    "placeholder": "ここにプロンプトを入力してください…",
+    "submit": "AIに採点してもらう",
+    "evaluating": "AIコーチが採点中…",
+    "back": "一覧に戻る",
+    "clear": "入力をクリア"
+  },
+  "result": {
+    "heading": "採点結果",
+    "score": "スコア",
+    "verdict": "総評",
+    "strengths": "良かった点",
+    "improvements": "改善のヒント",
+    "sampleAnswer": "お手本プロンプト",
+    "earnedXp": "獲得XP",
+    "retry": "もう一度挑戦",
+    "next": "次のクエストへ",
+    "newBadge": "新しいバッジを獲得しました！"
+  },
+  "myPage": {
+    "heading": "マイページ",
+    "subheading": "あなたの学習の記録",
+    "badges": "獲得バッジ",
+    "history": "挑戦履歴",
+    "noHistory": "まだ挑戦履歴がありません。クエストに挑戦してみましょう！",
+    "reset": "進捗をリセット",
+    "resetConfirm": "本当に進捗をリセットしますか？この操作は取り消せません。"
+  },
+  "errors": {
+    "generic": "エラーが発生しました。もう一度お試しください。",
+    "empty": "プロンプトを入力してください。",
+    "notConfigured": "GitHub Models のトークンが設定されていません。サーバーの .env を確認してください。"
+  },
+  "footer": {
+    "note": "プロトタイプ版 — 学習目的のデモアプリです。"
+  }
+}
