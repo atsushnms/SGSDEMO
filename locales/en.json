@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "lang": "en",
+    "dir": "ltr"
+  },
+  "app": {
+    "title": "PromptQuest",
+    "tagline": "Level up your Generative AI prompting, one quest at a time"
+  },
+  "nav": {
+    "home": "Home",
+    "quests": "Quests",
+    "myPage": "My Page",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "🎮 Learn by playing",
+    "heading": "Sharpen your prompting through quests",
+    "subheading": "Tackle real-world scenarios and get instant feedback from an AI coach. Earn XP and collect badges.",
+    "cta": "Start a quest"
+  },
+  "stats": {
+    "level": "Level",
+    "xp": "Total XP",
+    "cleared": "Cleared",
+    "nextBadge": "To next badge"
+  },
+  "quests": {
+    "heading": "Quests",
+    "subheading": "Pick a difficulty and hone your prompting skills",
+    "start": "Take on",
+    "cleared": "Cleared",
+    "xpLabel": "XP",
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+  "quest": {
+    "scenario": "Scenario",
+    "goal": "Goal",
+    "criteria": "What we look for",
+    "yourPrompt": "Your prompt",
+    "placeholder": "Type your prompt here…",
+    "submit": "Get AI score",
+    "evaluating": "The AI coach is grading…",
+    "back": "Back to list",
+    "clear": "Clear input"
+  },
+  "result": {
+    "heading": "Evaluation result",
+    "score": "Score",
+    "verdict": "Verdict",
+    "strengths": "Strengths",
+    "improvements": "Improvement hints",
+    "sampleAnswer": "Model prompt",
+    "earnedXp": "XP earned",
+    "retry": "Try again",
+    "next": "Next quest",
+    "newBadge": "You earned a new badge!"
+  },
+  "myPage": {
+    "heading": "My Page",
+    "subheading": "Your learning record",
+    "badges": "Badges earned",
+    "history": "Challenge history",
+    "noHistory": "No history yet. Go take on a quest!",
+    "reset": "Reset progress",
+    "resetConfirm": "Really reset your progress? This cannot be undone."
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "empty": "Please enter a prompt.",
+    "notConfigured": "GitHub Models token is not configured. Please check the server .env file."
+  },
+  "footer": {
+    "note": "Prototype — a demo app for learning purposes."
+  }
+}

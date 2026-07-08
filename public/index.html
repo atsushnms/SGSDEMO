@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PromptQuest — ゲーム形式で生成AIプロンプトスキルを学べる学習プラットフォーム" />
+    <title>PromptQuest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="nav.quests">クエストへスキップ</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#" data-nav="home" aria-label="PromptQuest">
+          <span class="brand-logo" aria-hidden="true">🎮</span>
+          <span class="brand-name">Prompt<span class="brand-accent">Quest</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="main">
+          <button class="nav-link" data-nav="home" data-i18n="nav.home">ホーム</button>
+          <button class="nav-link" data-nav="quests" data-i18n="nav.quests">クエスト</button>
+          <button class="nav-link" data-nav="myPage" data-i18n="nav.myPage">マイページ</button>
+        </nav>
+
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="ja" aria-pressed="true">日本語</button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <!-- ホーム / ヒーロー -->
+      <section id="view-home" class="view">
+        <div class="hero">
+          <span class="hero-badge" data-i18n="hero.badge">🎮 ゲーム形式で学ぶ</span>
+          <h1 class="hero-title" data-i18n="hero.heading">プロンプト力を、クエストで鍛えよう</h1>
+          <p class="hero-sub" data-i18n="hero.subheading">
+            実務シナリオに挑戦し、AIコーチが即座にフィードバック。
+          </p>
+          <button class="btn btn-primary btn-lg" data-nav="quests" data-i18n="hero.cta">
+            クエストを始める
+          </button>
+
+          <div class="stat-grid" id="home-stats" aria-live="polite">
+            <div class="stat-card">
+              <span class="stat-value" data-stat="level">1</span>
+              <span class="stat-label" data-i18n="stats.level">レベル</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" data-stat="xp">0</span>
+              <span class="stat-label" data-i18n="stats.xp">累計XP</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" data-stat="cleared">0</span>
+              <span class="stat-label" data-i18n="stats.cleared">クリア数</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- クエスト一覧 -->
+      <section id="view-quests" class="view" hidden>
+        <div class="section-head">
+          <h2 data-i18n="quests.heading">クエスト一覧</h2>
+          <p data-i18n="quests.subheading">難易度を選んでプロンプトスキルを磨こう</p>
+        </div>
+        <div id="quest-list" class="quest-grid"></div>
+      </section>
+
+      <!-- クエスト詳細 -->
+      <section id="view-quest" class="view" hidden>
+        <button class="btn btn-ghost btn-back" data-nav="quests">
+          ← <span data-i18n="quest.back">一覧に戻る</span>
+        </button>
+        <article class="quest-detail" id="quest-detail"></article>
+      </section>
+
+      <!-- マイページ -->
+      <section id="view-myPage" class="view" hidden>
+        <div class="section-head">
+          <h2 data-i18n="myPage.heading">マイページ</h2>
+          <p data-i18n="myPage.subheading">あなたの学習の記録</p>
+        </div>
+        <div class="mypage-grid">
+          <div class="panel">
+            <h3 data-i18n="myPage.badges">獲得バッジ</h3>
+            <div id="badge-list" class="badge-list"></div>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="myPage.history">挑戦履歴</h3>
+            <div id="history-list" class="history-list"></div>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-danger" id="reset-btn" data-i18n="myPage.reset">
+          進捗をリセット
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p data-i18n="footer.note">プロトタイプ版 — 学習目的のデモアプリです。</p>
+      </div>
+    </footer>
+
+    <!-- トースト通知 -->
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="/js/i18n.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
