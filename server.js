@@ -14,6 +14,7 @@ require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
+const rateLimit = require('express-rate-limit');
 
 const { getChallenges, getChallengeById, badges } = require('./src/challenges');
 const llm = require('./src/llm');
@@ -22,6 +23,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json({ limit: '32kb' }));
+
+// レートリミット: 過剰なリクエストからエンドポイントを保護する
+const apiLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 分
+  max: 60, // 1 IP あたり最大 60 リクエスト/分
+  standardHeaders: true,
+  legacyHeaders: false
+});
+app.use(apiLimiter);
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 多言語リソースを起動時に読み込む
